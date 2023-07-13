@@ -1,4 +1,3 @@
-class SplashScreen <ApplicationController
-    def index
-    end
+class SplashScreen < ApplicationController
+  def index; end
 end
