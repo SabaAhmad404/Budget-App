@@ -1,6 +1,6 @@
 class EntitiesController < ApplicationController
   before_action :set_category
-   before_action :set_user
+  before_action :set_user
 
   def index
     @entities = Entity.all
@@ -11,8 +11,8 @@ class EntitiesController < ApplicationController
   def edit; end
 
   def new
-    @categories=@user.categories.includes(:entities)
-    @entity =Entity.new
+    @categories = @user.categories.includes(:entities)
+    @entity = Entity.new
   end
 
   def create
@@ -22,12 +22,12 @@ class EntitiesController < ApplicationController
       flash[:notice] = 'Please select a category'
       return
     end
-  
+
     category_ids.each do |category_id|
       @entity = Entity.new(entity_params)
       @entity.author_id = @user.id
       @entity.category_ids = [category_id]
-  
+
       if @entity.valid? && @entity.save
         redirect_to category_entities_url(@entity)
         flash[:notice] = 'Entity created successfully'
@@ -38,7 +38,6 @@ class EntitiesController < ApplicationController
       end
     end
   end
-  
 
   def update
     if @entity.update(entity_params)
@@ -61,12 +60,11 @@ class EntitiesController < ApplicationController
   def set_category
     # @entity = Entity.find(params[:id])
 
-    @category=Category.find(params[:category_id])
-
+    @category = Category.find(params[:category_id])
   end
-     
+
   def set_user
-    @user=current_user
+    @user = current_user
   end
 
   def entity_params

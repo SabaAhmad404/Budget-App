@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: %i[name email password current_password])
   end
 
-  def after_confirmation_path_for(resource_name, resource)
+  def after_confirmation_path_for(_resource_name, _resource)
     root_path
   end
 end

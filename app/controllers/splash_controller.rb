@@ -1,3 +1,3 @@
-class SplashController< ApplicationController
+class SplashController < ApplicationController
   def index; end
 end
