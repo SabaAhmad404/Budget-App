@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: %i[show new update destroy]
+  # before_action :set_category, only: %i[show new update destroy]
 
   def index
     @categories = Category.where(author_id: current_user.id).order(created_at: :desc)
@@ -48,7 +48,7 @@ class CategoriesController < ApplicationController
   private
 
   def set_category
-    @categor = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def category_params

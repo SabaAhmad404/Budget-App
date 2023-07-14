@@ -1,0 +1,14 @@
+<%= render partial: 'shared/nav', locals: {imgp: image_path('backbutton.png'), url: categories_path , page_title: 'Transaction' }%>
+
+<div class="entities_container">
+
+<% @entities.each do |entity|%>
+    <div class="entities">
+       <h3><%= entity.name%></h3>
+       <p><%= entity.amount%></p>
+
+    </div>
+<%end%>
+
+ <%= link_to 'Add Transaction', new_category_entity_path %>
+</div>
