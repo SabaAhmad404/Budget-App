@@ -8,9 +8,9 @@ gem 'devise'
 gem 'rails', '~> 7.0.6'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'letter_opener'
-
+gem 'cancancan'
 gem 'carrierwave'
+gem 'letter_opener'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
