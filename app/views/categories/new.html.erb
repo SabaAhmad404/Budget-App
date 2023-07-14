@@ -1,0 +1,13 @@
+<%=render partial: 'shared/nav', locals: {imgp: image_path('backbutton.png'),url: categories_path , page_title: 'New Categories'}%>
+
+<div class="categories_form">
+
+<%= form_with model: @category do |form|%>
+  <%= form.label :name %>
+<%=form.text_field :name%>
+  <%= form.label :icone %>
+<%=form.file_field :icone%>
+<%=form.submit "submit"%>
+
+<%end%>
+<div>

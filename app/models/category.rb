@@ -5,6 +5,8 @@ class Category < ApplicationRecord
   validates :name, presence: true
   validates :icone, presence: true
 
+  mount_uploader :icone, ImageUploader
+
   def total
     entities.sum(:amount)
   end

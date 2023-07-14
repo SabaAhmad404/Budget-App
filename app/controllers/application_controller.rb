@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[name email password current_password])
   end
+
+  def after_confirmation_path_for(resource_name, resource)
+    root_path
+  end
 end
