@@ -1,12 +1,12 @@
 <div class="splash_container">
-<div class="logo">
-<%= image_tag image_path('image.png') %>
-<h1>Budget App</h1>
+<div class="logo" >
+<%= image_tag image_path('hi.png'), class: 'logo_image' %>
+<h1 style="font-size: 2.5rem">Budget App</h1>
 </div>
 
-<div>
-<%= link_to  'Sign_in' , new_user_session_path%>
-<%= link_to 'Sign_up' , new_user_registration_path%>
+<div class="btn_signs">
+<%= link_to  'Sign_in' , new_user_session_path ,class: 'btn btn-primary  w-100 '%>
+<%= link_to 'Sign_up' , new_user_registration_path , class: 'btn btn-primary  w-100 '%>
 </div>
 
 </div>
