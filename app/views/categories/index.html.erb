@@ -1,0 +1,19 @@
+<%= render partial: 'shared/nav',locals: {imgp: image_path('hamburg.png'),url:categories_path, page_title: 'Categories'}%>
+<div class="categories_container">
+  <% @categories.each do |category|%>
+      <div class="categories">
+       <div class="icone-container">
+         <img class="img-icone" src="<%= category.icone  %>" alt="icone">
+         <h3><%=link_to category.name, category_entities_path(category), class: "name-category" %></h3>
+         <p class="total"><%="$ #{category.total}"%></p>
+        </div>
+      <div>
+      <p class='t-date'>
+        <%= category.created_at.strftime('%d %b, %Y')%>
+        </p>
+     <hr/>
+  <%end%>
+   <div class="container">
+  <button class= "New-entity"><%= link_to 'New Category ', new_category_path, class:'category-link' %></button>
+   </div>
+</div>

@@ -1,0 +1,28 @@
+<%= render partial: 'shared/nav', locals: {imgp: image_path('backbutton.png'), url:category_entities_path , page_title: 'New Transaction'}%>
+
+<div class="transaction_form">
+
+<%= form_with(model: [@category, @entity], url: category_entities_path(@category))  do |f|%>
+<div class="name-form">
+<%= f.text_field :name, placeholder: 'Name', class: 'form-control'%>
+<%= f.number_field :amount, placeholder: 'Amount$', class: 'form-control'%>
+</div>
+
+<div class="form-categories">
+<h3 class="name-title">Categories</h3>
+<% @categories.each do |category| %>
+  <div class="check-box">
+  <%= f.check_box :category_ids, { multiple: true }, category.id, nil %>
+  <%= category.name %>
+  </div>
+  <br>
+<% end %>
+</div>
+
+  <div class="container">
+<%= f.submit 'Created Transaction', class:"New-entity"%>
+</div>
+<%end%>
+
+
+</div>

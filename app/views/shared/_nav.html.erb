@@ -1,0 +1,16 @@
+
+<nav class="nav_container">
+
+   <span>
+    <%= link_to url do %>
+   <%= image_tag imgp, alt: 'Back', class: 'back-button' %>
+    <% end %>
+    </span>
+
+   <span> <h2><%= page_title %></h2></span>
+   <span>
+    <% if user_signed_in?%>
+    <%= button_to 'Log out', destroy_user_session_path, method: :delete, class:'log-out-button' %>
+    <%end%> 
+    </span>
+</nav>
