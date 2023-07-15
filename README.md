@@ -52,11 +52,11 @@
 
 
 ### Live Demo
-This is a [live]() demo of the mobile app
+This is a [live link](https://rails-budget-app-mnta.onrender.com/) demo of the mobile app
 
 
 ### Video Demo
-This is a [video]() demonstration of the app
+This is a [video presentation](https://www.loom.com/share/a38fbc8f9ca242529c1ac3e3a63e4285?sid=e66c70b8-858c-4b11-99bf-b24980cb078c) demonstration of the app
 
 <!-- Features -->
 
