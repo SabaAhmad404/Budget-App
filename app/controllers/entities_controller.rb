@@ -58,8 +58,6 @@ class EntitiesController < ApplicationController
   private
 
   def set_category
-    # @entity = Entity.find(params[:id])
-
     @category = Category.find(params[:category_id])
   end
 

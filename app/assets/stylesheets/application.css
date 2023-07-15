@@ -214,3 +214,9 @@ form {
 .name-title {
   font-size: 20px;
 }
+
+.t-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
