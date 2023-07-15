@@ -8,6 +8,9 @@
          <p class="total"><%="$ #{category.total}"%></p>
         </div>
       <div>
+      <p class='t-date'>
+        <%= category.created_at.strftime('%d %b, %Y')%>
+        </p>
      <hr/>
   <%end%>
 
