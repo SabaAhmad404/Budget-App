@@ -2,9 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   let(:author) { User.create(name: 'John Doe') }
-  let(:category) { Category.new(name: 'Test Category', author: author) }
-
-  
+  let(:category) { Category.new(name: 'Test Category', author:) }
 
   describe 'validations' do
     it 'validates presence of name' do
