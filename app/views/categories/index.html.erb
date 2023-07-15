@@ -1,15 +1,15 @@
 <%= render partial: 'shared/nav',locals: {imgp: image_path('hamburg.png'),url:categories_path, page_title: 'Categories'}%>
 <div class="categories_container">
-
   <% @categories.each do |category|%>
       <div class="categories">
-       
-       <h3><%=link_to category.name, category_entities_path(category) %></h3>
-       <p><%="amount $ #{category.total}"%></p>
-       <img src="<%= category.icone %>" alt="icone">
+       <div class="icone-container">
+         <img class="img-icone" src="<%= category.icone  %>" alt="icone">
+         <h3><%=link_to category.name, category_entities_path(category), class: "name-category" %></h3>
+         <p class="total"><%="$ #{category.total}"%></p>
+        </div>
       <div>
+     <hr/>
   <%end%>
 
-
-   <%= link_to 'New Category ', new_category_path %>
+  <button class= "New-Category"><%= link_to 'New Category ', new_category_path, class:'category-link' %></button>
 </div>

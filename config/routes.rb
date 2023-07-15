@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   end
 
   authenticated :user do
-
     root "categories#index" , as: :authenticated_user
 
   end

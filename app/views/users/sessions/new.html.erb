@@ -1,14 +1,16 @@
-<h2>Log in</h2>
+<%= render partial: "shared/nav", locals: {imgp: image_path('backbutton.png'), url: unauthenticated_user_path, page_title: 'Login'}%>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+<div class="log-in">
+ <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: 'Email' , class: 'form-control'%>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <br />
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'form-control' %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -18,9 +20,10 @@
     </div>
   <% end %>
 
+   <%= render "users/shared/links" %>
+
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: 'btn btn-primary w-100'%>
   </div>
 <% end %>
-
-<%= render "users/shared/links" %>
+</div>

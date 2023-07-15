@@ -1,15 +1,216 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.splash_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo_image {
+  height: 80px;
+  width: 80px;
+}
+
+h1 {
+  padding-bottom: 1.5rem;
+}
+
+.btn_signs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 6rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.nav_container {
+  padding: 10px;
+  display: flex;
+  gap: 1rem;
+  background-color: #3778c2;
+  justify-content: space-between;
+  color: white;
+}
+
+.back-button {
+  height: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: #e6e3e3;
+}
+
+.log-in {
+  height: 100vh;
+}
+
+.sign-in {
+  height: 100vh;
+}
+
+.actions {
+  margin-top: auto;
+  width: 90%;
+}
+
+/* categories start from here */
+.log-out-button {
+  background-color: greenyellow;
+  color: white;
+  border: none;
+  padding: 12px;
+}
+
+/* categories */
+.img-icone {
+  height: 6rem;
+  width: 6rem;
+}
+
+.categories_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e6e3e3;
+}
+
+.icone-container {
+  margin: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name-category {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.New-Category {
+  border: none;
+  background-color: #3778c2;
+  color: white;
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+.category-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+/* category form started  */
+
+.categories_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #e6e3e3;
+}
+
+.name-icone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100vh;
+  margin-top: 4rem;
+}
+
+.file-field {
+  border: none;
+  background-color: white;
+}
+
+.create-button {
+  border: none;
+  background-color: #3778c2;
+  color: white;
+  width: 100%;
+  height: 3rem;
+}
+
+/* transaction start from here */
+
+.category-entity {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-entity {
+  height: 6rem;
+  width: 6rem;
+  margin-top: 1.5rem;
+}
+
+.New-entity {
+  border: none;
+  background-color: #3778c2;
+  color: white;
+  width: 100%;
+  height: 3rem;
+  margin-top: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.entities_container {
+  background-color: #e6e3e3;
+}
+
+.entities {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 18px;
+}
+
+/* transaction form */
+
+.transaction_form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.name-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-categories {
+  margin-top: 1rem;
+  margin-right: 10rem;
+}
+
+.name-title {
+  font-size: 20px;
+}
